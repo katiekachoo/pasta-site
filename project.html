@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 3</title>
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(166, 226, 229) 0%,
+          rgb(198, 232, 221) 100.2%
+        );
+      }
+      .body {
+        border: 1px solid #de8971;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px #a7d0cd;
+        margin: 0 auto;
+        max-width: 500px;
+        padding: 13px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: linear-gradient(
+          143deg,
+          rgb(255, 168, 168) 20%,
+          rgb(252, 255, 0) 100%
+        );
+        text-align: center;
+        color: #7b6079;
+      }
+      h1 {
+        padding: 5px;
+        text-shadow: 1px 1px 2px #000;
+      }
+      img {
+        margin: 0 auto;
+        display: block;
+        max-width: 90%;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 13px;
+      }
+      span {
+        display: block;
+        padding: 8px;
+        font-size: 13px;
+      }
+      a {
+        text-decoration: none;
+        font-style: italic;
+        font-weight: 600px;
+        color: #7b6079;
+      }
+      a:hover {
+        color: #de8971;
+        text-decoration: underline;
+      }
+      button {
+        font-size: 19px;
+        padding: 17px;
+        margin: 35px;
+        background-color: #de8971;
+        color: #fff;
+        border: 1px solid #de8971;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px #7b6079;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background-color: #a7d0cd;
+        cursor: pointer;
+        color: #000;
+        border-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body">
+      <h1><strong>I love pasta!</strong></h1>
+      <h2><em>These buttered noodles are the best!</em></h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/016/677/original/Buttered-Egg-Noodles-DSC_1992-edit-google.jpg?1630888587"
+      />
+      <p>
+        There’s nothing quite like the taste of freshly cooked, homemade pasta.
+      </p>
+
+      <hr />
+      <p>
+        Typically, most people reach for dried pasta when in a pinch for time.
+        Simply add the dried pasta to boiling water, and you have a quick and
+        easy meal!
+      </p>
+      <span>
+        But for a truly authentic Italian experience, you’ll want to whip up a
+        batch of fresh pasta, from scratch.
+      </span>
+
+      <br />
+      <a
+        href="https://firenzerestaurantbellevue.com/the-difference-of-fresh-vs-dry-pasta-2/"
+        target="_blank"
+      >
+        Why is fresh pasta better? Click here to find out.
+      </a>
+      <button>👉 Get the recipe! 👈</button>
+    </div>
+    <script>
+      function changeHead() {
+        let h1 = document.querySelector("h1");
+        h1.innerHTML = "Welcome to the pasta party! 🎉";
+      }
+      function getRecipe() {
+        let name = prompt("What is your name?");
+        let getAge = prompt("What is your age?");
+        if (getAge >= 21) {
+          alert(`Hello, ${name}! Wine and pasta are the perfect pair! 😍 `);
+        } else {
+          alert(`We hope you love pasta as much as we do, ${name}! `);
+        }
+        let email = prompt("What is your email?");
+        changeHead();
+      }
+      let getButton = document.querySelector("button");
+      getButton.addEventListener("click", getRecipe);
+    </script>
+  </body>
+</html>
